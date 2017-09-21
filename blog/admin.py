@@ -6,9 +6,10 @@ from .models import Blog, Category, Author
 
 class BlogAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug": ("title",)}
-    list_display = ('title', 'category', 'created_on', 'last_updated_on', 'is_published')
+    list_display = ('title', 'created_on', 'last_updated_on', 'is_published')
     search_fields = ('title', 'category__title')
-    list_filter = ('category',)
+    list_filter = ()
+    filter_horizontal = ('category',)
 
 class CategoryAdmin(admin.ModelAdmin):
     pass
