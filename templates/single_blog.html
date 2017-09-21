@@ -1,0 +1,17 @@
+{% load staticfiles %}
+
+<link href="{% static 'css/style.css' %}" type="text/css" rel="stylesheet" />
+
+<h3>{{ blog.title }}</h3>
+
+<h5>{{ blog.author|default_if_none:'N/A' }}</h5>
+
+<p>
+  {{ blog.category|default_if_none:'N/A' }}
+</p>
+
+<p>
+  {{ blog.body|safe }}
+</p>
+
+<span>{{ blog.created_on|date:'Y-m-d' }}</span>
