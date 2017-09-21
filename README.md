@@ -1,4 +1,4 @@
-h3. Installation
+### Installation
 - clone the repo
 - create virtualenv (pip install virtualenv; virtualenv env)
 - activate virtualenv (source env/bin/activate)
