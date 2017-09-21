@@ -1,7 +1,9 @@
-{% load staticfiles %}
+{% extends 'layouts/_base.html' %}
 
-<link href="{% static 'css/style.css' %}" type="text/css" rel="stylesheet" />
 
+{% block title %}{{ blog.title }}{% endblock %}
+
+{% block content %}
 <h3>{{ blog.title }}</h3>
 
 <h5>{{ blog.author|default_if_none:'N/A' }}</h5>
@@ -15,3 +17,4 @@
 </p>
 
 <span>{{ blog.created_on|date:'Y-m-d' }}</span>
+{% endblock %}

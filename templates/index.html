@@ -1,1 +1,7 @@
-<p>Hello, {{  fullname }}</p>
+{% extends 'layouts/_base.html' %}
+
+{% block title %} Index Page {% endblock %}
+
+{% block content %}
+<h3>Hello, {{ fullname }}</h3>
+{% endblock %}
